@@ -25,9 +25,9 @@ app.set("view engine", "ejs");
 // __dirname: current project directory name
 
 // load assets: so that while calling the path, you dont have to mention the path right ffrom the root directory... ou can just mention css/style.css (if there is a file inside css folder) look how..!
-app.set('/css', express.static(path.resolve(__dirname, 'assets/css')))
-app.set('/img', express.static(path.resolve(__dirname, 'assets/img')))
-app.set('/js', express.static(path.resolve(__dirname, 'assets/js')))
+app.use('/css', express.static(path.resolve(__dirname, 'assets/css')))
+app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
+app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
 
 
 // requesting a page on the browser by requesting the server...
